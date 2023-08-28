@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<h1 style="color:dodgerblue">Login</h1>
+<hr />
+<form method="post" asp-controller="Authen" asp-action="Login">
+
+    <label>Email</label> <hr /> 
+    <input type="text" name="email" value="" class="form-control" /> <hr />
+
+    <label>Password</label> <hr />
+    <input type="password" name="password" value="" class="form-control" /> <hr />
+
+    <button type="submit" name="action" value="Login">Login</button>
+    <button type="reset" value="Reset">Reset</button>
+</form>
+<br />
+<h3 style="color:red">@ViewData["ErrorMsg"]</h3>

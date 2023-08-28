@@ -1,0 +1,13 @@
+﻿@model eStore.Models.Customer    
+@{
+    ViewData["Title"] = "Customer Information";
+    Customer loginCustomer = ViewBag.Customer;
+}
+<div class="header">
+    <h1>Welcome, @loginCustomer.CustomerName</h1> 
+    <a asp-action="Logout" asp-controller="Authen">Logout</a>
+</div>
+<hr />
+<a asp-action="ShowDetailInfo" asp-controller="CustomerInfo" asp-route-id="@loginCustomer.CustomerId">View information</a> <br />
+<a asp-action="OrdCustomer" asp-controller="CustomerInfo" asp-route-id="@loginCustomer.CustomerId">Order History</a>
+

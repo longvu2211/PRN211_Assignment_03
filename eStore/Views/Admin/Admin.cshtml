@@ -1,0 +1,11 @@
+﻿@model eStore.Models.Customer
+@{
+    ViewData["Title"] = "Admin page";
+    Customer admin = ViewBag.Admin;
+}
+<h1>Hello, Admin!</h1>
+<a asp-action="Logout" asp-controller="Authen">Logout</a>
+<hr />
+<a asp-action="Index" asp-controller="Customers">Customer Management</a> <br />
+<a asp-action="Index" asp-controller="FlowerBouquets">FLowerBouquet Management</a> <br />
+<a asp-action="Index" asp-controller="Orders">Order Management</a> <br />
